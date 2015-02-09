@@ -70,6 +70,17 @@ dropdown{
    display: inline-block;
    margin: 1em 2%; 
 }
+
+h2, p {
+ margin: 1em 2%;
+ color: $text;
+}
+
+a{
+ text-decoration: none;
+ color: $blue;
+}
+
 dropdown label, dropdown ul li{
   display: block;
   width: 500px;
