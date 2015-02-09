@@ -1,34 +1,93 @@
+@font-face {
+  font-family: 'custom-font';
+  src: url('../font/custom-font.eot?72163870');
+  src: url('../font/custom-font.eot?72163870#iefix') format('embedded-opentype'),
+       url('../font/custom-font.woff?72163870') format('woff'),
+       url('../font/custom-font.ttf?72163870') format('truetype'),
+       url('../font/custom-font.svg?72163870#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?72163870#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "custom-font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-desktop:before { content: '\e808'; } /* '' */
+.icon-phone-outline:before { content: '\e809'; } /* '' */
+.icon-home-outline:before { content: '\e80b'; } /* '' */
+.icon-info-outline:before { content: '\e80c'; } /* '' */
+
+
+
 *{
   padding: 0;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: $font;
   box-sizing: border-box;
 }
 .float-right{
   float: right;
 }
 .fa{
- font-size: .8em;
+ font-size: .9em;
   line-height: 22px !important;
 }
 dropdown{
    display: inline-block;
-   margin: 20px 50px; 
+   margin: 1em 2%; 
 }
 dropdown label, dropdown ul li{
   display: block;
-  width: 200px;
-  background: #ECF0F1;
-  padding: 15px 20px;
+  width: 500px;
+  background: $menu-bg;
+  padding: 30px 30px;
 }
 dropdown label:hover, dropdown ul li:hover{
-  background: #1ABC9C;
-  color: white;
+  background: $green;
+  color: $white;
   cursor: pointer;
 }
 dropdown label{
-  color: #1ABC9C;
-  border-left: 4px solid #1ABC9C;
+  color: $green;
+  border-left: 4px solid $green;
   border-radius: 0 5px 0 0; 
   position: relative;
   z-index: 2;
@@ -44,8 +103,8 @@ dropdown input ~ ul{
   z-index: 1;
 }
 dropdown input:checked + label{
-  background: #1ABC9C;
-  color: white;
+  background: $green;
+  color: $white;
 }
 
 dropdown input:checked ~ ul{
@@ -63,9 +122,9 @@ $colors: #E74C3C, #0072B5, #2C3E50;
     }
     &:hover {
         background: nth($colors, $i);
-        color: white;
+        color: $white;
       .fa{
-        color: white; 
+        color: $white; 
       }
     }
   }

@@ -1,38 +1,100 @@
-/* line 1, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+@font-face {
+  font-family: 'custom-font';
+  src: url('../font/custom-font.eot?72163870');
+  src: url('../font/custom-font.eot?72163870#iefix') format('embedded-opentype'), url('../font/custom-font.woff?72163870') format('woff'), url('../font/custom-font.ttf?72163870') format('truetype'), url('../font/custom-font.svg?72163870#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?72163870#fontello') format('svg');
+  }
+}
+*/
+/* line 22, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "custom-font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+/* line 53, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+.icon-desktop:before {
+  content: '\e808'; }
+
+/* '' */
+/* line 54, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+.icon-phone-outline:before {
+  content: '\e809'; }
+
+/* '' */
+/* line 55, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+.icon-home-outline:before {
+  content: '\e80b'; }
+
+/* '' */
+/* line 56, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+.icon-info-outline:before {
+  content: '\e80c'; }
+
+/* '' */
+/* line 60, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box; }
 
-/* line 7, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 66, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 .float-right {
   float: right; }
 
-/* line 10, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 69, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 .fa {
-  font-size: 0.8em;
+  font-size: 0.9em;
   line-height: 22px !important; }
 
-/* line 14, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 73, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown {
   display: inline-block;
-  margin: 20px 50px; }
+  margin: 1em 2%; }
 
-/* line 18, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 77, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown label, dropdown ul li {
   display: block;
-  width: 200px;
+  width: 500px;
   background: #ECF0F1;
-  padding: 15px 20px; }
+  padding: 30px 30px; }
 
-/* line 24, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 83, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown label:hover, dropdown ul li:hover {
   background: #1ABC9C;
-  color: white;
+  color: #fff;
   cursor: pointer; }
 
-/* line 29, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 88, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown label {
   color: #1ABC9C;
   border-left: 4px solid #1ABC9C;
@@ -40,11 +102,11 @@ dropdown label {
   position: relative;
   z-index: 2; }
 
-/* line 36, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 95, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown input {
   display: none; }
 
-/* line 39, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 98, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown input ~ ul {
   position: relative;
   visibility: hidden;
@@ -52,60 +114,60 @@ dropdown input ~ ul {
   top: -20px;
   z-index: 1; }
 
-/* line 46, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 105, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown input:checked + label {
   background: #1ABC9C;
-  color: white; }
+  color: #fff; }
 
-/* line 51, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 110, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown input:checked ~ ul {
   visibility: visible;
   opacity: 1;
   top: 0; }
 
-/* line 59, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 118, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown ul li:nth-child(1) {
   border-left: 4px solid #E74C3C; }
-  /* line 61, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+  /* line 120, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
   dropdown ul li:nth-child(1) .fa {
     color: #E74C3C; }
-  /* line 64, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+  /* line 123, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
   dropdown ul li:nth-child(1):hover {
     background: #E74C3C;
-    color: white; }
-    /* line 67, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+    color: #fff; }
+    /* line 126, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
     dropdown ul li:nth-child(1):hover .fa {
-      color: white; }
+      color: #fff; }
 
-/* line 59, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 118, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown ul li:nth-child(2) {
   border-left: 4px solid #0072B5; }
-  /* line 61, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+  /* line 120, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
   dropdown ul li:nth-child(2) .fa {
     color: #0072B5; }
-  /* line 64, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+  /* line 123, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
   dropdown ul li:nth-child(2):hover {
     background: #0072B5;
-    color: white; }
-    /* line 67, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+    color: #fff; }
+    /* line 126, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
     dropdown ul li:nth-child(2):hover .fa {
-      color: white; }
+      color: #fff; }
 
-/* line 59, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 118, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 dropdown ul li:nth-child(3) {
   border-left: 4px solid #2C3E50; }
-  /* line 61, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+  /* line 120, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
   dropdown ul li:nth-child(3) .fa {
     color: #2C3E50; }
-  /* line 64, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+  /* line 123, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
   dropdown ul li:nth-child(3):hover {
     background: #2C3E50;
-    color: white; }
-    /* line 67, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+    color: #fff; }
+    /* line 126, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
     dropdown ul li:nth-child(3):hover .fa {
-      color: white; }
+      color: #fff; }
 
-/* line 74, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
+/* line 133, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 .animate {
   transition: all 0.3s;
   backface-visibility: hidden;
