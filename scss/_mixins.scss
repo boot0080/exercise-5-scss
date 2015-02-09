@@ -1,0 +1,7 @@
+@mixin animate-linear($duration) {
+  -webkit-transition: all $duration linear;
+  -moz-transition: all $duration linear;
+  -ms-transition: all $duration linear;
+  -ms-transition: all $duration linear;
+  transition: all $duration linear;
+}

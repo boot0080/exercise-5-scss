@@ -183,7 +183,7 @@ dropdown ul li:nth-child(4) {
 
 /* line 129, /Users/ariahboots/Desktop/Year Three/Web Development V/exercise-5-scss/scss/components/main */
 .animate {
-  transition: all 0.3s;
+  transition: all 200ms linear;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   /* Chrome and Safari */

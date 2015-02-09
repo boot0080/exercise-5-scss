@@ -126,12 +126,8 @@ $colors: #3cace7, #ff5757, #60dea9, #fff037;
   }
 }
 
-.animate{
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -ms-transition: all .3s;
-  transition: all .3s;  
+.animate{ 
+ @include animate-linear(200ms);    
   backface-visibility:hidden;
   -webkit-backface-visibility:hidden; /* Chrome and Safari */
   -moz-backface-visibility:hidden; /* Firefox */
